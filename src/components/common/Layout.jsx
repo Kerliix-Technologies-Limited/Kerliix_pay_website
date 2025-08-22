@@ -7,15 +7,15 @@ export default function Layout({ children }) {
   const location = useLocation();
 
   // Routes where navbar is NOT shown
-  const noNavbarRoutes = ['/notfound'];
+  const noNavbarRoutes = ['/checkout'];
   // Routes where footer is NOT shown (optional)
-  const noFooterRoutes = ['/notfound'];
+  const noFooterRoutes = ['/checkout'];
 
   const showNavbar = !noNavbarRoutes.includes(location.pathname.toLowerCase());
   const showFooter = !noFooterRoutes.includes(location.pathname.toLowerCase());
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-900 via-black to-gray-900">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#0c1c2c' }}>
       {showNavbar && <Navbar />}
 
       <main className={`${showNavbar ? 'mt-16' : 'mt-0'} flex-1 p-6`}>
