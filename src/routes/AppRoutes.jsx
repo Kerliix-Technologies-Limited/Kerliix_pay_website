@@ -3,10 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
 import Home from '../pages/Home';
-import Checkout from '../pages/Checkout';
-import About from '../pages/About';
-import Privacy from '../pages/Privacy';
-import Terms from '../pages/Terms';
 import NotFound from '../pages/NotFound';
 
 export default function AppRoutes() {
@@ -16,10 +12,7 @@ export default function AppRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/privacy" element={<Privacy />} />
-        <Route path="/terms" element={<Terms />} />
-
+        
         {/* Show NotFound page for all unmatched routes */}
         <Route path="*" element={<NotFound />} />
       </Routes>
